@@ -1,0 +1,24 @@
+﻿@import "../../modules/_base.scss";
+
+/*Site Logo*/
+.header__logo{
+    display:inline-block;
+    float:left;
+    @include px2rem(margin-right, 10px);
+    @include px2rem(width, 38px);
+    @include px2rem(height, 38px);
+    @include hide-text;
+    background-image:url(../img/Darth_Vader.png);
+    background-size:contain;
+
+    @include hidpi(1.5) {
+      background-image:url(../img/Darth_Vader2x.png);
+    }
+
+    @include media($tablet){
+        @include px2rem(margin-right, 25px);
+        @include px2rem(width, 48px);
+        @include px2rem(height, 48px);
+    }
+}
+
