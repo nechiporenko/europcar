@@ -54,13 +54,15 @@ body{
 /* Typography*/
 h1, h2, h3, h4, h5, h6, .g-title{
   margin-top: 0;
-  @include px2rem(margin-bottom, 35px);
+  @include px2rem(margin-bottom, 28px);
   line-height:1.2;
   color:$title-color;
-  font-weight:400;
+  font-weight:300;
 }
 .g-title{
     display:block;
+    @include font-size(32px);
+    text-align:center;
 }
 
 .g-brand-color{

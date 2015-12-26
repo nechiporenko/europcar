@@ -2,5 +2,15 @@
 
 
 @import "page/_banner.scss"; //Баннер з формою заявки
+@import "page/_actions.scss";//блок акційних пропозицій
 @import "page/_scroll-up.scss";
 
+/*Page Section*/
+.b-section{
+    padding:23px 0;
+    background:#fff;
+    font-weight:300;
+}
+.b-section--alt{
+    background:#f0f0f0;
+}

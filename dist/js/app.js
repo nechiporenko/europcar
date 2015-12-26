@@ -304,6 +304,11 @@ jQuery(document).ready(function ($) {
         });
     }
 
-
+    //
+    // IE8
+    //---------------------------------------------------------------------------------------
+    if ($html.hasClass('lt-ie9')) {
+        $('.b-action__item:nth-child(2n+1)').css('margon-right', 0);
+    }
     
 });

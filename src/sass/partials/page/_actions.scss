@@ -1,0 +1,80 @@
+﻿@import "../../modules/_base.scss";
+/*Actions Section*/
+.b-action{
+    @extend .b-section;
+}
+.b-action__list{
+    @extend .g-clearlist;
+    @extend .g-clearfix;
+}
+
+.b-action__item{
+    display:block;
+    width:100%;
+    max-width:300px;
+    margin:0 auto;
+    text-align:center;
+
+    @include media($tablet){
+        @include span-columns(4);
+        @include omega(3n);
+    }
+}
+.b-action__thumb{
+    position:relative;
+    margin:0 0 24px 0;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:100%;
+    }
+}
+
+.b-action__link{
+    display:block;
+    position:absolute;
+    top:0; right:0; bottom:0; left:0;
+    background:#333;
+
+    &:hover,
+    &:active{
+        .b-action__img{
+            opacity:.85;
+        }
+    }
+}
+
+.b-action__img{
+    @extend .g-img-centered;
+    @include transition(opacity .3s ease);
+    @include backface-visibility(hidden);
+}
+
+.b-action__title{
+    display:block;
+    margin:0 0 13px;
+    color:$title-color;
+    @include font-size(18px);
+    font-weight:400;
+    line-height:1.33;
+}
+.b-action__title-link{
+    color:$title-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
+
+.b-action__content{
+    @include font-size(14px);
+    font-weight:300;
+
+    b, strong{
+        font-weight:500;
+        color:$primary;
+    }
+}
