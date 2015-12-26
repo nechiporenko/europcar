@@ -9,13 +9,14 @@ $project-font-size:14px; //in px
 $project-line-height:18px; //in px
 
 $grid-gutter: flex-gutter();
-$border-radius:6px;
+$border-radius:8px;
 
 //colors
 $text-color:#292929;
 $title-color:$text-color;
 $border-color:#d1d1d1;
 $primary:#067400;
+$primary-alt:#ffdc00;
 
 
 @function calculateRem($size) {

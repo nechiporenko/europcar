@@ -37,9 +37,15 @@ textarea {
 /* Base Styles */
 html{
     font-size:100%;
+    height:100%;
 }
 
 body{
+   
+}
+
+.b-page{ //body class
+    min-height:100%;
     line-height:strip-units($project-line-height/$project-font-size);
     font-family: 'Roboto', Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
     color: $text-color;

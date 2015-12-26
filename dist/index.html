@@ -15,14 +15,115 @@
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body>
+<body class="b-page">
+    <!--HEADER START-->
     <header class="b-header">
-
+        <div class="g-container">
+            <a href="#" class="b-header__logo">Europcar</a>
+            <button type="button" class="b-header__btn js-mtoggle"><i class="icon-menu"></i></button>
+            <button type="button" class="b-header__btn"><i class="icon-phone"></i></button>
+        </div>
+        <nav class="h-menu js-header">
+            <div class="g-container">
+                <ul class="h-menu__list">
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Europcar</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Локації у світі</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Акції</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Переваги</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Варто знати</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Об'яви</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link">Контакти</a>
+                    </li>
+                    <li class="h-menu__item">
+                        <a href="#" class="h-menu__link h-menu__link--callback">
+                            <span class="h-menu__callback"><i class="icon-phone"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <main class="b-main">
-
+    <!--/HEADER END-->
+    <main>
+        <!--BANNER SECTION START-->
+        <div class="b-banner">
+            <div class="g-container">
+                <form class="b-banner__form">
+                    <span class="b-banner__title">Орендувати авто</span>
+                    <label class="g-visuallyhidden">Оберіть країну</label>
+                    <select class="b-banner__select">
+                        <option selected disabled>Оберіть країну</option>
+                        <option>Україна</option>
+                        <option>Литва</option>
+                        <option>Естонія</option>
+                        <option>Хорватія</option>
+                    </select>
+                    <label class="g-visuallyhidden">Оберить місто/аеропорт</label>
+                    <input type="text" class="b-banner__input" placeholder="Місто / Аеропорт" />
+                    <div class="g-row">
+                        <div class="b-banner__col">
+                            <label class="b-banner__label">Оренда</label>
+                            <input type="text" class="b-banner__input" />
+                        </div>
+                        <div class="b-banner__col">
+                            <label class="b-banner__label">Повернення</label>
+                            <input type="text" class="b-banner__input" />
+                        </div>
+                    </div>
+                    <label class="g-visuallyhidden">Введіть Ваш e-mail</label>
+                    <input type="email" class="b-banner__input" placeholder="Введіть Ваш e-mail" />
+                    <label class="g-visuallyhidden">Ваш коментар</label>
+                    <textarea class="b-banner__textarea">Ваш коментар</textarea>
+                    <button type="submit" class="b-banner__btn">Відправити</button>
+                </form>
+            </div>
+        </div>
+        <!--/BANNER SECTION END-->
     </main>
-    <nav class="m-menu"></nav>
+
+    <!--MOBILE MENU START-->
+    <nav class="m-menu js-mmenu">
+        <ul class="m-menu__list">
+            <li class="m-menu__item">
+                <label class="m-menu__label">Меню</label>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Europcar</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Локації у світі</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Акції</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Переваги</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Варто знати</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Об'яви</a>
+            </li>
+            <li class="m-menu__item">
+                <a href="#" class="m-menu__link">Контакти</a>
+            </li>
+        </ul>
+    </nav>
+    <!--/MOBILE MENU END-->
     <footer class="b-footer">
 
     </footer>

@@ -1,0 +1,103 @@
+﻿@import "../../modules/_base.scss";
+/*Banner & Order Form*/
+.b-banner{
+    @include padding(18px 0);
+    background-color:#808080;
+    background-image:url(../img/banner-sm.jpg);
+    background-position:center top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    box-sizing:border-box;
+    overflow:hidden;
+
+    @include media($tablet){
+        @include px2rem(height, 738px);
+        @include px2rem(padding, 54px 0 0);
+    }
+
+    @include media(min-width em(800)){
+        background-image:url(../img/banner.jpg);
+    }
+}
+
+.b-banner__form{
+    width:100%;
+    max-width:380px;
+    margin:0 auto;
+    padding:10px;
+    border:1px solid lighten(#333, 20%);
+    border-radius:20px;
+    background:#333333;
+    background:rgba(#333, .3);
+    color:#fff;
+    box-sizing:border-box;    
+
+    @include media($small){
+        padding:23px 18px 13px;
+    }
+
+    @include media($desktop){
+        float:right;
+    }
+}
+
+.b-banner__col{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    min-height:1px;
+
+    @include media($small){
+        width:(100%-$grid-gutter)/2;
+        margin-left:$grid-gutter;
+        &:first-child{
+            margin-left:0;
+        }    
+    }
+}
+
+.b-banner__title{
+    display:block;
+    margin:0 0 28px;
+    color:#fff;
+    @include font-size(32px);
+    font-weight:300;
+    line-height:1.2;
+    text-align:center;
+}
+
+.b-banner__input{
+    @extend .g-input;
+}
+
+.b-banner__select{
+    @extend .g-select;
+}
+.b-banner__textarea{
+    @extend.g-textarea;
+}
+
+.b-banner__input,
+.b-banner__select,
+.b-banner__textarea{
+    margin-bottom:28px;
+
+    @include media($small){
+        margin-bottom:18px;
+    }
+}
+
+.b-banner__label{
+    @extend .g-label;
+    margin-top:-25px;
+
+    @include media($small){
+        @include px2rem(margin, -8px 0 2px);
+    }
+}
+
+.b-banner__btn{
+    @extend .g-btn;
+    width:100%;
+}
+

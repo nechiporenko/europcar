@@ -1,3 +1,43 @@
 @import "../modules/base";
 @import "header/_logo.scss";
 
+/*Site Header*/
+.b-header{
+    padding:10px 0;
+    @include linear-gradient(to right, #144624, #93c130);
+
+    @include media($desktop){
+        padding:28px 0 0;
+    }
+}
+
+.b-header__btn{
+    float:right;
+    padding:0;
+    margin:0 0 0 10px;
+    @include px2rem(width, 36px);
+    @include px2rem(height, 36px);
+    @include px2rem(line-height, 36px);
+    border:1px solid #fff;
+    background:none;
+    border-radius:2px;
+    color:#fff;
+    @include font-size(24px);
+    text-align:center;
+    box-sizing:border-box;
+
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+
+    &:hover,
+    &:focus{
+        color:$primary-alt;
+        border-color:$primary-alt;
+        outline:0;
+    }
+
+    @include media($desktop){
+        display:none;
+    }
+}

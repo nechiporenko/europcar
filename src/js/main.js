@@ -13,7 +13,8 @@ jQuery(document).ready(function ($) {
     //Кэшируем
     var $window = $(window),
         $html=$('html'),
-        $body = $('body');
+        $body = $('body'),
+        BREAKPOINT = 992;
 
     $body.append('<div id="overlay" class="overlay"></div>');//оверлей
     var $overlay = $('#overlay');
@@ -21,6 +22,106 @@ jQuery(document).ready(function ($) {
     //
     // Мобильное меню
     //---------------------------------------------------------------------------------------
+    function initMobileMenu() {
+        var $btn = $('.js-mtoggle'),
+            $menu = $('.js-mmenu');
+
+
+        $('.b-header').on('click', '.js-mtoggle', function () {//покажем - спрячем
+            if ($(this).hasClass('active')) {
+                hideMenu();
+            } else {
+                showMenu();
+            }
+        });
+
+        $menu.on('click', '.m-menu__label', hideMenu); //закроем по клику по заголовку
+
+        function hideMenu() {
+            $btn.removeClass('active');
+            $menu.removeClass('active');
+            $html.css('overflow', 'auto');
+            $overlay.unbind('click', hideMenu).hide();
+        }
+
+        function showMenu() {
+            $btn.addClass('active');
+            $menu.addClass('active');
+            $html.css('overflow', 'hidden');
+            $overlay.show();
+        }
+
+        $menu.mouseleave(function () {//будем закрывать по клику на оверлей
+            $overlay.bind('click', hideMenu)
+        }).mouseenter(function () {
+            $overlay.unbind('click', hideMenu);
+        });
+    }
+    initMobileMenu();
+
+    //
+    // Фиксируем хидер при скролле
+    //---------------------------------------------------------------------------------------
+    function stickyHeader() {
+        $('.js-header').wrap('<div class="header__wrap"></div>');
+        var $wrap = $('.header__wrap'),
+            flag = false,
+            winW,
+            activeClass = 'scrolled',
+            topOffset = 54, //высота десктоп-меню
+            isStick;
+
+        //проверим скролл при загрузке страницы
+        recalcScroll();
+
+        function checkScroll() {
+            isStick = verge.inViewport($wrap, -topOffset);
+
+            if (!isStick && !flag) {
+                stickMenu();
+            }
+
+            if (isStick && flag) {
+                unstickMenu();
+            }
+        }
+        
+        function stickMenu() {
+            $wrap.addClass(activeClass);
+            flag = true;
+        }
+
+        function unstickMenu() {
+            $wrap.removeClass(activeClass);
+            flag = false;
+        }
+
+        function recalcScroll() {
+            winW = verge.viewportW();
+            isStick = verge.inViewport($wrap, -topOffset);
+
+            if(winW>=BREAKPOINT && !isStick && !flag) {
+                stickMenu();
+                $window.bind('scroll', checkScroll);
+            }
+
+            if (winW >= BREAKPOINT && isStick && !flag) {
+                $window.bind('scroll', checkScroll);
+            }
+
+            if (winW < BREAKPOINT && flag) {
+                unstickMenu();
+                $window.unbind('scroll', checkScroll);
+            }
+        }
+
+        $window.on('resize', function () {
+            setTimeout(500, recalcScroll());
+        });
+    }
+    stickyHeader();
+
+
 
     //
     // Маска для телефонного номера

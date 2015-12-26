@@ -2,27 +2,28 @@
 /* Buttons */
 .g-btn{
     display: inline-block;
-    @include px2rem(height, 38px);
+    @include px2rem(height, 54px);
     @include px2rem(padding, 0 30px);
-    color:#fff;
+    color:$primary;
     text-align: center;
-    @include font-size($project-line-height/2);
-    @include px2rem(line-height, 38px);
-    letter-spacing:1px;
+    @include font-size(16px);
+    font-weight:500;
+    @include px2rem(line-height, 54px);
     text-transform: uppercase;
     text-decoration: none;
     white-space: nowrap;
-    background-color: $primary;
-    border-radius:$border-radius;
-    border: 1px solid $primary;
+    background-color: $primary-alt;
+    border-radius:27px;
+    border: 1px solid $primary-alt;
     cursor: pointer;
     box-sizing: border-box;
 
     &:hover,
     &:focus,
     &:active{
-        color:#fff;
-        background-color:darken($primary, 10%);
+        color:$primary-alt;
+        background-color:$primary;
+        border-color:$primary;
         outline:0;
     }
 }

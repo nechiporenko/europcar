@@ -24,9 +24,11 @@ textarea {
     color:$text-color;
     box-shadow: none;
     box-sizing: border-box;
+    @include font-size(18px);
+    font-weight:300;
 
     @include placeholder{
-        color:#888888;
+        color:$text-color;
         text-overflow:ellipsis;
     }
 
@@ -39,17 +41,18 @@ textarea {
 
 .g-input,
 .g-select{
-    @include px2rem(height, 38px);
+    @include px2rem(height, 54px);
 }
 
 .g-textarea{
-    @include px2rem(min-height, 65px);
+    @include px2rem(min-height, 90px);
 }
 
 .g-label{
     display: block;
-    @include px2rem(margin-bottom, $project-line-height/4);
-    font-weight: bold;
+    @include font-size(18px);
+    @include px2rem(margin, 0 0 2px);
+    font-weight: 300;
 }
 .g-label__body{
     display: inline-block;
@@ -84,6 +87,7 @@ input[type="radio"] {
     right:5px;
     text-decoration:none;
     cursor:pointer;
+    color:$text-color;
 }
 
 .g-notice--bad{
