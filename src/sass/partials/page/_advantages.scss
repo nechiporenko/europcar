@@ -30,11 +30,20 @@
         padding-top:36%;
     }
 }
+
+.b-advantages__link{
+    @extend .b-action__link;
+}
+
 .b-advantages__img{
-    @extend .g-img-centered;
+    @extend .b-action__img;
 }
 .b-advantages__title{
     @extend .b-action__title;
+}
+
+.b-advantages__title-link{
+    @extend .b-action__title-link;
 }
 .b-advantages__content{
     @extend .b-action__content;

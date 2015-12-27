@@ -296,6 +296,8 @@ jQuery(document).ready(function ($) {
         $('.b-action__item:nth-child(4n-1)').css('margin-right', 0);
         $('.b-advantages__item:nth-child(4n-1)').css('margin-right', 0);
         $('.b-advantages__item:nth-child(5n-1)').css('margin-left', 17 + '%').css('clear', 'left');
+        $('.b-faq__item:nth-child(2n+1)').css('clear', 'left');
+        $('.b-faq__item:nth-child(2n)').css('margin-right', 0);
     }
     
 });

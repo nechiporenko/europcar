@@ -3,6 +3,9 @@
 .b-action{
     @extend .b-section;
 }
+.b-action--alt{
+    @extend .b-section--alt;
+}
 .b-action__list{
     @extend .g-clearlist;
     @extend .g-clearfix;
