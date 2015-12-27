@@ -254,7 +254,7 @@ jQuery(document).ready(function ($) {
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top - topOffset
             }, 900, 'swing', function () {
-                history.pushState(null, null, window.location.search + id);
+                //history.pushState(null, null, window.location.search + id);
             });
         }
     }
