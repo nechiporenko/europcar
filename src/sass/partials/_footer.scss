@@ -1,2 +1,123 @@
 @import "../modules/base";
 
+/*Site Footer*/
+.b-footer{
+    padding:15px 0;
+    background:#333;
+    color:#fff;
+    text-align:center;
+
+    @include media($tablet){
+        padding:40px 0 10px;
+    }
+
+    @include media($desktop){
+        padding-bottom:0;
+    }
+}
+
+.b-footer__title{
+    @extend .g-title;
+    margin-bottom:23px;
+    color:#fff;
+}
+
+.b-footer__call{
+    display:inline-block;
+    margin-bottom:28px;
+    @include font-size(32px);
+    color:$primary-alt;
+    font-weight:300;
+    text-decoration:none;
+    text-transform:uppercase;
+    white-space:nowrap;
+    line-height:1;
+
+    @include media($tablet){
+        @include font-size(48px);
+    }
+}
+
+.social-list{
+    padding:0;
+    margin:0 0 50px 0;
+    list-style-type:none;
+    font-size:0;
+}
+.social-list__item{
+    display:inline-block;
+    margin:0 5px;
+    @include font-size(18px);
+}
+.social-list__link{
+    color:#fff;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+}
+
+.b-footer__sole{
+    @extend .g-clearfix;
+}
+
+.b-footer__col{
+    float:left;
+    width:100%;
+    min-height:1px;
+    @include media($desktop){
+        width:(100%-$grid-gutter)/2;
+        margin-left:$grid-gutter;
+        &:first-child{
+            margin-left:0;
+        }
+    }
+}
+.b-footer__text{
+    margin-bottom:10px;
+    @include font-size(12px);
+    font-weight:300;
+
+    @include media($desktop){
+        margin:0;
+        height:30px;
+        line-height:30px;
+        white-space:nowrap;
+        text-align:left;
+
+        &.b-footer__text--last{
+            text-align:right;
+        }
+    }
+
+}
+
+
+.mobile-list{
+    @extend .g-clearlist;
+    font-size:0;
+
+    @include media($desktop){
+        float:right;
+        text-align:right;
+    }
+}
+.mobile-list__item{
+    @extend .social-list__item;
+
+    @include media($desktop){
+        margin:0 0 0 10px;
+    }
+}
+.mobile-list__link{
+    @extend .social-list__link;
+    vertical-align:middle;
+    [class^="icon-"]:before, [class*=" icon-"]:before{
+        margin:0;
+    }
+}
+.mobile-list__link--big{
+    @include font-size(24px);
+}
