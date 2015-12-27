@@ -44,21 +44,6 @@
     }
 }
 
-.b-banner__col{
-    width: 100%;
-    float: left;
-    box-sizing: border-box;
-    min-height:1px;
-
-    @include media($small){
-        width:(100%-$grid-gutter)/2;
-        margin-left:$grid-gutter;
-        &:first-child{
-            margin-left:0;
-        }    
-    }
-}
-
 .b-banner__title{
     display:block;
     margin:0 0 28px;
@@ -69,38 +54,55 @@
     text-align:center;
 }
 
-.b-banner__input{
-    @extend .g-input;
-}
-
-.b-banner__select{
-    @extend .g-select;
-}
-.b-banner__textarea{
-    @extend.g-textarea;
-}
-
-.b-banner__input,
-.b-banner__select,
-.b-banner__textarea{
-    margin-bottom:28px;
+.b-banner__col{
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    min-height:1px;
+    position:relative;
 
     @include media($small){
-        margin-bottom:18px;
+        width:(100%-$grid-gutter)/2;
+        margin-left:$grid-gutter;
+        &:first-child{
+            margin-left:0;
+        }    
+    }
+
+    &:before{
+        content:'\e80b';
+        font-family:'fontello';
+        position:absolute;
+        left:20px;
+        top:32px;
+        z-index:1;
+        color:$primary;
+        @include font-size(18px);
+    }
+}
+
+.b-banner__dateholder{
+    position:absolute;
+    top:18px;
+    left:0;
+    z-index:1;
+
+    @include media($small){
+        left:auto;
+        right:0;
     }
 }
 
 .b-banner__label{
     @extend .g-label;
-    margin-top:-25px;
-
-    @include media($small){
-        @include px2rem(margin, -8px 0 2px);
-    }
+    position:absolute;
+    left:0;
+    top:-8px;
 }
 
-.b-banner__btn{
-    @extend .g-btn;
-    width:100%;
+.b-banner__input{
+    @extend .g-input;
+    margin-top:18px;
+    color:$primary;
+    padding-left:45px;
 }
-

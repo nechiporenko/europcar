@@ -9,6 +9,7 @@
 // Smooth-Скролл по странице
 // Модальное окно
 // Поиск
+// Календарь
 // Если браузер не знает о svg-картинках
 // Если браузер не знает о плейсхолдерах в формах
 
@@ -260,6 +261,66 @@ jQuery(document).ready(function ($) {
             suggest(matches);
         }
     });
+    //
+    // Календарь
+    //---------------------------------------------------------------------------------------
+    function initCalendar() {
+        moment.locale('uk');
+        var picker_lang = {
+            previousMonth: 'Попередній місяць',
+            nextMonth: 'Наступний місяць',
+            months: ['Січень', 'Лютий', 'Березень', 'Квітень', 'Травень', 'Червень', 'Липень', 'Серпень', 'Вересень', 'Жовтень', 'Листопад', 'Грудень'],
+            weekdays: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', "П'ятниця", 'Субота'],
+            weekdaysShort: ['Нед', 'Пон', 'Вів', 'Сер', 'Чет', 'Птн', 'Суб']
+        };
+
+        
+        //var $startInput = $('#start_date'),
+        //    $endInput = $('#end_date'),
+        //    startValue = moment(),
+        //    endValue = moment().add(1, 'days');
+        //$startInput.val(moment(startValue).format('L'));
+        //$endInput.val(moment(endValue).format('L'));
+
+
+        var startDate,
+        endDate,
+        startPicker = new Pikaday({
+            field: document.getElementById('start_date'),
+            container: document.getElementById('start_holder'),
+            format: 'L',
+            firstDay: 1,
+            yearRange: [2015, 2040],
+            minDate: moment().toDate(),
+            i18n: picker_lang,
+            onSelect: function () {
+                startDate = this.getDate();
+                updateStartDate();
+            }
+        }),
+        endPicker = new Pikaday({
+            field: document.getElementById('end_date'),
+            container: document.getElementById('end_holder'),
+            format: 'L',
+            firstDay: 1,
+            yearRange: [2015, 2040],
+            minDate: moment().subtract(1, 'days').toDate(),
+            i18n: picker_lang,
+            onSelect: function () {
+                endDate = this.getDate();
+                updateEndDate();
+            }
+        });
+
+        function updateEndDate() {
+            startPicker.setMaxDate(moment(endDate).subtract(1, 'days'));
+        };
+
+        function updateStartDate() {
+            endPicker.setMinDate(new Date(moment(startDate).add(1, 'days')));
+        };
+    };
+    initCalendar();
 
     //
     // Если браузер не знает о svg-картинках

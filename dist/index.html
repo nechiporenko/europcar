@@ -64,7 +64,7 @@
             <form class="b-banner__form">
                 <h1 class="b-banner__title">Орендувати авто</h1>
                 <label class="g-visuallyhidden">Оберіть країну</label>
-                <select class="b-banner__select">
+                <select class="g-select">
                     <option selected disabled>Оберіть країну</option>
                     <option>Україна</option>
                     <option>Литва</option>
@@ -72,22 +72,24 @@
                     <option>Хорватія</option>
                 </select>
                 <label class="g-visuallyhidden">Оберить місто/аеропорт</label>
-                <input type="text" class="b-banner__input js-search" placeholder="Місто / Аеропорт" />
+                <input type="text" class="g-input js-search" placeholder="Місто / Аеропорт" required />
                 <div class="g-row">
                     <div class="b-banner__col">
                         <label class="b-banner__label">Оренда</label>
-                        <input type="text" class="b-banner__input" />
+                        <input type="text" class="b-banner__input" id="start_date" placeholder="дд.мм.рррр" required />
+                        <div class="b-banner__dateholder" id="start_holder"></div>
                     </div>
                     <div class="b-banner__col">
                         <label class="b-banner__label">Повернення</label>
-                        <input type="text" class="b-banner__input" />
+                        <input type="text" class="b-banner__input" id="end_date" placeholder="дд.мм.рррр" required />
+                        <div class="b-banner__dateholder" id="end_holder"></div>
                     </div>
                 </div>
                 <label class="g-visuallyhidden">Введіть Ваш e-mail</label>
-                <input type="email" class="b-banner__input" placeholder="Введіть Ваш e-mail" />
+                <input type="email" class="g-input" placeholder="Введіть Ваш e-mail" required />
                 <label class="g-visuallyhidden">Ваш коментар</label>
-                <textarea class="b-banner__textarea">Ваш коментар</textarea>
-                <button type="submit" class="b-banner__btn">Відправити</button>
+                <textarea class="g-textarea">Ваш коментар</textarea>
+                <button type="submit" class="g-btn g-full-width">Відправити</button>
             </form>
         </div>
     </section>
