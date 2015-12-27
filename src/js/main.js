@@ -2,8 +2,11 @@
 
 
 // Мобильное меню
+// Скролл по странице при клике в десктоп-меню
+// Фиксируем хидер при скролле
 // Маска для телефонного номера
 // Кнопка скролла страницы
+// Smooth-Скролл по странице
 // Модальное окно
 // Если браузер не знает о svg-картинках
 // Если браузер не знает о плейсхолдерах в формах
@@ -55,8 +58,24 @@ jQuery(document).ready(function ($) {
         });
 
         $menu.on('click', '.m-menu__label', method.hideMenu); //закроем по клику по заголовку
+
+        $menu.on('click', '.js-inner-link', function (e) {
+            e.preventDefault();
+            var id = $(this).attr('href');
+            smoothScroll(id, 0);
+            method.hideMenu();
+        });
     }
     initMobileMenu();
+
+    //
+    // Скролл по странице при клике в десктоп-меню
+    //---------------------------------------------------------------------------------------
+    $('.js-header').on('click', '.js-inner-link', function (e) {
+        e.preventDefault();
+        var id = $(this).attr('href');
+        smoothScroll(id, 54); //54 - sticky header height
+    });
 
     //
     // Фиксируем хидер при скролле
@@ -83,7 +102,6 @@ jQuery(document).ready(function ($) {
 
         method.check = function () {
             noStick = verge.inViewport($wrap, -topOffset);//проверяем положение враппера на єкране
-            console.log(noStick);
 
             if (!noStick && !flag) {
                 method.stick();
@@ -122,6 +140,7 @@ jQuery(document).ready(function ($) {
     }
     stickyHeader();
 
+
     //
     // Маска для телефонного номера
     //---------------------------------------------------------------------------------------
@@ -145,6 +164,22 @@ jQuery(document).ready(function ($) {
             return false;
         });
     }());
+
+
+    //
+    // Smooth-Скролл по странице
+    //---------------------------------------------------------------------------------------
+    function smoothScroll(id, topOffset) {
+        var $target = $(id);
+        
+        if ($target.length) {
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top - topOffset
+            }, 900, 'swing', function () {
+                window.location.hash = id;
+            });
+        }
+    }
 
 
     //
@@ -210,6 +245,7 @@ jQuery(document).ready(function ($) {
         if (link) { showModal.open(link); }
     });
 
+    
     //
     // Если браузер не знает о svg-картинках
     //---------------------------------------------------------------------------------------
