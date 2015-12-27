@@ -1,0 +1,54 @@
+﻿@import "../../modules/_base.scss";
+/*FAQ Block*/
+.b-faq{
+    @extend .b-section;
+}
+.b-faq__list{
+    padding:0;
+    margin:0;
+    counter-reset:li;
+    @extend .g-clearfix;
+}
+.b-faq__item{
+    margin-bottom:25px;
+    padding-left:60px;
+    position:relative;
+    list-style:none;
+    box-sizing:border-box;
+
+    &:before{
+        content:counter(li);
+        counter-increment:li;
+        display:block;
+        @include px2rem(width, 28px);
+        @include px2rem(height, 28px);
+        @include px2rem(line-height, 28px);
+        box-sizing:border-box;
+        border:1px solid $primary;
+        border-radius:50%;
+        font-weight:400;
+        text-align:center;
+        color:$primary;
+        position:absolute;
+        left:0;
+        @include px2rem(top, -3px);
+    }
+
+    @include media($tablet){
+        @include span-columns(6);
+        @include omega(2n);
+        min-height:46px;
+    }
+}
+
+.b-faq__link{
+    @include font-size(18px);
+    font-weight:300;
+    color:$text-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}

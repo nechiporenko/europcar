@@ -254,7 +254,7 @@ jQuery(document).ready(function ($) {
     if ($html.hasClass('lt-ie9')) {
         $('.b-action__item:nth-child(4n-1)').css('margin-right', 0);
         $('.b-advantages__item:nth-child(4n-1)').css('margin-right', 0);
-        $('.b-advantages__item:nth-child(5n-1)').css('margin-left', 17 + '%');
+        $('.b-advantages__item:nth-child(5n-1)').css('margin-left', 17 + '%').css('clear', 'left');
     }
     
 });
