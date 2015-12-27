@@ -22,7 +22,7 @@
         display:block;
         @include px2rem(width, 28px);
         @include px2rem(height, 28px);
-        @include px2rem(line-height, 28px);
+        @include px2rem(line-height, 26px);
         box-sizing:border-box;
         border:1px solid $primary;
         border-radius:50%;

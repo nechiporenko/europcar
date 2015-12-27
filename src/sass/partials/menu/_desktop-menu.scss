@@ -78,7 +78,7 @@
     display:inline-block;
     @include px2rem(height, 36px);
     @include px2rem(width, 36px);
-    @include px2rem(line-height, 36px);
+    @include px2rem(line-height, 34px);
     border:1px solid #fff;
     border-radius:50%;
     text-align:center;

@@ -82,12 +82,20 @@ jQuery.extend(verge);
 jQuery(document).ready(function ($) {
     //Кэшируем
     var $window = $(window),
-        $html=$('html'),
+        $html = $('html'),
         $body = $('body'),
         BREAKPOINT = 992;
 
     // Убрали прелоадер, добавили оверлей
-    $body.find('.js-preloader').remove();
+    $window.on('load', function () {
+        var $preloader = $('.js-preloader'),
+            $spinner = $preloader.find('.icon');
+        $spinner.fadeOut('fast');
+        $preloader.delay(200).fadeOut('fast', function () {
+            $preloader.remove();
+        });
+
+    });
     $body.append('<div id="overlay" class="overlay"></div>');//оверлей
     var $overlay = $('#overlay');
 
