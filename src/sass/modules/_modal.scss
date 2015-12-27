@@ -29,10 +29,11 @@
 }
 
 .modal__content{
-    border-radius:$border-radius;
-    background:#fff;
     @include px2rem(padding, 20px 10px);
     margin:0;
+    border-radius:$border-radius;
+    background:#fff;
+    font-weight:300;
 
     @include media($small){
         @include px2rem(padding, $project-line-height 20px);

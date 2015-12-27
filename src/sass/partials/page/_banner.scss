@@ -105,4 +105,7 @@
     margin-top:18px;
     color:$primary;
     padding-left:45px;
+    @include placeholder{
+        color:$primary;
+    }
 }

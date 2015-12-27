@@ -9,6 +9,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <script src="js/vendor/modernizr.js"></script>
+    <style>
+        .js .preloader{position:fixed;left:0;top:0;right:0;bottom:0;background:#f0f0f0;z-index:4000}.preloader .icon{width:32px;height:32px;position:absolute;left:50%;top:50%;background:url(img/loader.gif) 50% 50% no-repeat;margin:-16px 0 0 -16px}.no-js .preloader{display:none}
+    </style>
     <link rel="stylesheet" href="css/app.css">       
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -16,10 +19,14 @@
     <![endif]-->
 </head>
 <body class="b-page">
+    <div class="preloader js-preloader">
+        <span class="icon"></span>
+    </div>
+
     <!--HEADER START-->
     <header class="b-header">
         <div class="g-container">
-            <a href=" http://www.europcar.ua" class="b-header__logo">Europcar</a>
+            <a href=" http://www.europcar.ua" class="b-header__logo" target="_blank">Europcar</a>
             <button type="button" class="b-header__btn js-mtoggle"><i class="icon-menu"></i></button>
             <button type="button" class="b-header__btn" data-modal="#callback"><i class="icon-phone"></i></button>
         </div>
@@ -27,10 +34,10 @@
             <div class="g-container">
                 <ul class="h-menu__list">
                     <li class="h-menu__item">
-                        <a href="http://www.europcar.ua" class="h-menu__link">Europcar</a>
+                        <a href="http://www.europcar.ua" class="h-menu__link" target="_blank">Europcar</a>
                     </li>
                     <li class="h-menu__item">
-                        <a href="http://www.europcar.ua/locations" class="h-menu__link">Локації у світі</a>
+                        <a href="http://www.europcar.ua/locations" class="h-menu__link" target="_blank">Локації у світі</a>
                     </li>
                     <li class="h-menu__item">
                         <a href="#actions" class="h-menu__link js-inner-link">Акції</a>
@@ -232,40 +239,40 @@
                 <h2 class="g-title">Варто знати</h2>
                 <ol class="b-faq__list">
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Які документи необхідні для того, щоб орендувати автомобіль?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Які документи необхідні для того, щоб орендувати автомобіль?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Який мінімальний вік водія, щоб орендувати авто закордоном?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Який мінімальний вік водія, щоб орендувати авто закордоном?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Депозит і його розмір.</a>
+                        <a href="#" class="b-faq__link" target="_blank">Депозит і його розмір.</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Коли бронювати авто?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Коли бронювати авто?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи отримаю я таке саме авто, яке вказано на сайті?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи отримаю я таке саме авто, яке вказано на сайті?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи можу я виїхати на орендованому авто за межі країни?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи можу я виїхати на орендованому авто за межі країни?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи можливо орендувати додаткове обладнання?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи можливо орендувати додаткове обладнання?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи входить пальне у вартість оренди авто?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи входить пальне у вартість оренди авто?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи можливо замовити доставку автомобіля в готель?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи можливо замовити доставку автомобіля в готель?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Як повернути автомобіль у неробочий час?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Як повернути автомобіль у неробочий час?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Що означає стандартна страховка?</a>
+                        <a href="#" class="b-faq__link" target="_blank">Що означає стандартна страховка?</a>
                     </li>
                     <li class="b-faq__item">
-                        <a href="#" class="b-faq__link">Чи є в Europcar програма лояльності для постійних клієнтів</a>
+                        <a href="#" class="b-faq__link" target="_blank">Чи є в Europcar програма лояльності для постійних клієнтів</a>
                     </li>
                 </ol>
             </div>
@@ -335,10 +342,10 @@
                 <label class="m-menu__label">Меню</label>
             </li>
             <li class="m-menu__item">
-                <a href="http://www.europcar.ua" class="m-menu__link">Europcar</a>
+                <a href="http://www.europcar.ua" class="m-menu__link" target="_blank">Europcar</a>
             </li>
             <li class="m-menu__item">
-                <a href="http://www.europcar.ua/locations" class="m-menu__link">Локації у світі</a>
+                <a href="http://www.europcar.ua/locations" class="m-menu__link" target="_blank">Локації у світі</a>
             </li>
             <li class="m-menu__item">
                 <a href="#actions" class="m-menu__link js-inner-link">Акції</a>
@@ -373,7 +380,7 @@
 
     <div class="modal" id="skype">
         <div class="modal__content">
-            <span class="modal__title">У Вас є питання щодо оренди авто або інших послуг Europcar?</span>
+            <span class="modal__title">У Вас є питання щодо послуг Europcar?</span>
             <p class="g-text-center">Будь ласка, зв'яжіться з нами через скайп-чат</p>
             <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
             <div id="SkypeButton_Call_europcar.ukraine_1" class="g-text-center">

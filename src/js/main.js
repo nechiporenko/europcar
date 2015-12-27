@@ -1,6 +1,6 @@
 // Application Scripts:
 
-
+// Убрали прелоадер, добавили оверлей
 // Мобильное меню
 // Скролл по странице при клике в десктоп-меню
 // Фиксируем хидер при скролле
@@ -20,6 +20,8 @@ jQuery(document).ready(function ($) {
         $body = $('body'),
         BREAKPOINT = 992;
 
+    // Убрали прелоадер, добавили оверлей
+    $body.find('.js-preloader').remove();
     $body.append('<div id="overlay" class="overlay"></div>');//оверлей
     var $overlay = $('#overlay');
 
@@ -178,7 +180,7 @@ jQuery(document).ready(function ($) {
             $('html, body').stop().animate({
                 'scrollTop': $target.offset().top - topOffset
             }, 900, 'swing', function () {
-                window.location.hash = id;
+                history.pushState(null, null, window.location.search + id);
             });
         }
     }
@@ -254,13 +256,14 @@ jQuery(document).ready(function ($) {
         minChars: 2,
         source: function (term, suggest) {
             term = term.toLowerCase();
-            var choices = searchComplete;
+            var choices = searchComplete; //берем массив значений из html-странички
             var matches = [];
             for (i = 0; i < choices.length; i++)
                 if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
             suggest(matches);
         }
     });
+
     //
     // Календарь
     //---------------------------------------------------------------------------------------
@@ -273,15 +276,6 @@ jQuery(document).ready(function ($) {
             weekdays: ['Неділя', 'Понеділок', 'Вівторок', 'Середа', 'Четвер', "П'ятниця", 'Субота'],
             weekdaysShort: ['Нед', 'Пон', 'Вів', 'Сер', 'Чет', 'Птн', 'Суб']
         };
-
-        
-        //var $startInput = $('#start_date'),
-        //    $endInput = $('#end_date'),
-        //    startValue = moment(),
-        //    endValue = moment().add(1, 'days');
-        //$startInput.val(moment(startValue).format('L'));
-        //$endInput.val(moment(endValue).format('L'));
-
 
         var startDate,
         endDate,

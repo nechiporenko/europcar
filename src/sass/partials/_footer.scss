@@ -12,7 +12,7 @@
     }
 
     @include media($desktop){
-        padding-bottom:0;
+        //padding-bottom:0;
     }
 }
 
@@ -100,7 +100,7 @@
     font-size:0;
 
     @include media($desktop){
-        float:right;
+        display:inline-block;
         text-align:right;
     }
 }
