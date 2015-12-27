@@ -188,7 +188,6 @@ jQuery(document).ready(function ($) {
     var showModal = (function (link) {
         var
         method = {},
-        $overlay,
         $modal,
         $close;
 

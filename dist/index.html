@@ -21,7 +21,7 @@
         <div class="g-container">
             <a href=" http://www.europcar.ua" class="b-header__logo">Europcar</a>
             <button type="button" class="b-header__btn js-mtoggle"><i class="icon-menu"></i></button>
-            <button type="button" class="b-header__btn"><i class="icon-phone"></i></button>
+            <button type="button" class="b-header__btn" data-modal="#callback"><i class="icon-phone"></i></button>
         </div>
         <nav class="h-menu js-header">
             <div class="g-container">
@@ -48,7 +48,7 @@
                         <a href="#contacts" class="h-menu__link js-inner-link">Контакти</a>
                     </li>
                     <li class="h-menu__item">
-                        <a href="#" class="h-menu__link h-menu__link--callback">
+                        <a href="#" class="h-menu__link h-menu__link--callback" data-modal="#callback">
                             <span class="h-menu__callback"><i class="icon-phone"></i></span>
                         </a>
                     </li>
@@ -357,6 +357,37 @@
     </nav>
     <!--/MOBILE MENU END-->
 
+    <!--MODAL WINDOWS START-->
+    <div class="modal" id="callback">
+        <form class="modal__content">
+            <span class="modal__title">Передзвоніть мені</span>
+            <label class="g-visuallyhidden">Ваше ім'я</label>
+            <input type="text" class="g-input" placeholder="Введіть Ваше ім'я" required />
+            <label class="g-visuallyhidden">Ваш телефон</label>
+            <input type="text" class="g-input js-phone-input" placeholder="Введіть Ваш телефон" required />
+            <button type="submit" class="g-btn g-full-width">Надіслати</button>
+        </form>
+    </div>
+
+    <div class="modal" id="skype">
+        <div class="modal__content">
+            <span class="modal__title">У Вас є питання щодо оренди авто або інших послуг Europcar?</span>
+            <p class="g-text-center">Будь ласка, зв'яжіться з нами через скайп-чат</p>
+            <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+            <div id="SkypeButton_Call_europcar.ukraine_1" class="g-text-center">
+                <script type="text/javascript">
+                     Skype.ui({
+                     "name": "chat",
+                     "element": "SkypeButton_Call_europcar.ukraine_1",
+                     "participants": ["europcar.ukraine"],
+                     "imageSize": 32
+                     });
+                </script>
+            </div>
+        </div>
+    </div>
+    <!--/MODAL WINDOWS END-->
+
     <!--FOOTER START-->
     <footer class="b-footer" id="contacts">
         <div class="g-container">
@@ -364,16 +395,16 @@
             <a href="tel:+380442203565" class="b-footer__call">+38 044 220 35 65</a>
             <ul class="social-list">
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link"><i class="icon-skype"></i></a>
+                    <a href="#" class="social-list__link" data-modal="#skype"><i class="icon-skype"></i></a>
                 </li>
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link"><i class="icon-twitter"></i></a>
+                    <a href="https://twitter.com/Europcar" class="social-list__link" target="_blank"><i class="icon-twitter"></i></a>
                 </li>
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link"><i class="icon-facebook"></i></a>
+                    <a href="https://www.facebook.com/europcar" class="social-list__link" target="_blank"><i class="icon-facebook"></i></a>
                 </li>
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link"><i class="icon-gplus"></i></a>
+                    <a href="https://plus.google.com/+EuropcarUaukraine" class="social-list__link" target="_blank"><i class="icon-gplus"></i></a>
                 </li>
             </ul>
             <div class="b-footer__sole">
