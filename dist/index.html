@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Boilerplate</title>
+    <title>Europcar</title>
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -48,7 +48,7 @@
                         <a href="#contacts" class="h-menu__link js-inner-link">Контакти</a>
                     </li>
                     <li class="h-menu__item">
-                        <a href="#" class="h-menu__link h-menu__link--callback" data-modal="#callback">
+                        <a href="#callback" class="h-menu__link h-menu__link--callback" data-modal="#callback">
                             <span class="h-menu__callback"><i class="icon-phone"></i></span>
                         </a>
                     </li>
@@ -59,7 +59,7 @@
     <!--/HEADER END-->
 
     <!--BANNER SECTION START-->
-    <div class="b-banner">
+    <section class="b-banner">
         <div class="g-container">
             <form class="b-banner__form">
                 <h1 class="b-banner__title">Орендувати авто</h1>
@@ -72,7 +72,7 @@
                     <option>Хорватія</option>
                 </select>
                 <label class="g-visuallyhidden">Оберить місто/аеропорт</label>
-                <input type="text" class="b-banner__input" placeholder="Місто / Аеропорт" />
+                <input type="text" class="b-banner__input js-search" placeholder="Місто / Аеропорт" />
                 <div class="g-row">
                     <div class="b-banner__col">
                         <label class="b-banner__label">Оренда</label>
@@ -90,7 +90,7 @@
                 <button type="submit" class="b-banner__btn">Відправити</button>
             </form>
         </div>
-    </div>
+    </section>
     <!--/BANNER SECTION END-->
 
     <!--MAIN SECTION START-->
@@ -395,7 +395,7 @@
             <a href="tel:+380442203565" class="b-footer__call">+38 044 220 35 65</a>
             <ul class="social-list">
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link" data-modal="#skype"><i class="icon-skype"></i></a>
+                    <a href="#skype" class="social-list__link" data-modal="#skype"><i class="icon-skype"></i></a>
                 </li>
                 <li class="social-list__item">
                     <a href="https://twitter.com/Europcar" class="social-list__link" target="_blank"><i class="icon-twitter"></i></a>
@@ -418,13 +418,13 @@
                         Europcar у Вашому мобільному
                         <ul class="mobile-list">
                             <li class="mobile-list__item">
-                                <a href="#" class="mobile-list__link mobile-list__link--big"><i class="icon-tablet"></i></a>
+                                <a href="https://itunes.apple.com/us/app/europcar-car-van-rental-worldwide./id377889715?mt=8" class="mobile-list__link mobile-list__link--big"><i class="icon-tablet"></i></a>
                             </li>
                             <li class="mobile-list__item">
-                                <a href="#" class="mobile-list__link"><i class="icon-mobile"></i></a>
+                                <a href="https://itunes.apple.com/us/app/europcar-car-van-rental-worldwide./id377889715?mt=8" class="mobile-list__link"><i class="icon-mobile"></i></a>
                             </li>
                             <li class="mobile-list__item">
-                                <a href="#" class="mobile-list__link"><i class="icon-android"></i></a>
+                                <a href="https://play.google.com/store/apps/details?id=com.clanmo.europcar" class="mobile-list__link"><i class="icon-android"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -434,6 +434,10 @@
         </div>
     </footer>
     <!--/FOOTER END-->
+
+    <script>
+        var searchComplete = ['Київ','Бориспіль','Жуляни','Львів','Kyiv','Boryspil', 'Lviv'];
+    </script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>

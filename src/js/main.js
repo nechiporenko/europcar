@@ -8,6 +8,7 @@
 // Кнопка скролла страницы
 // Smooth-Скролл по странице
 // Модальное окно
+// Поиск
 // Если браузер не знает о svg-картинках
 // Если браузер не знает о плейсхолдерах в формах
 
@@ -244,7 +245,22 @@ jQuery(document).ready(function ($) {
         if (link) { showModal.open(link); }
     });
 
-    
+
+    //
+    // Поиск
+    //---------------------------------------------------------------------------------------
+    $('.js-search').autoComplete({
+        minChars: 2,
+        source: function (term, suggest) {
+            term = term.toLowerCase();
+            var choices = searchComplete;
+            var matches = [];
+            for (i = 0; i < choices.length; i++)
+                if (~choices[i].toLowerCase().indexOf(term)) matches.push(choices[i]);
+            suggest(matches);
+        }
+    });
+
     //
     // Если браузер не знает о svg-картинках
     //---------------------------------------------------------------------------------------
