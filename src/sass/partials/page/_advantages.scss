@@ -1,0 +1,41 @@
+﻿@import "../../modules/_base.scss";
+/*Advantages Section*/
+.b-advantages{
+    @extend .b-section;
+    @extend .b-section--alt;
+}
+
+.b-advantages__list{
+    @extend .g-clearfix;
+    @extend .g-clearlist;
+}
+
+.b-advantages__item{
+    @extend .b-action__item;
+
+    @include media($tablet){
+        &:nth-child(5n-1){
+            margin-left:17.06%;
+        }
+    }
+}
+
+.b-advantages__thumb{
+    position:relative;
+    margin:0 0 24px 0;
+
+    &:after{
+        content:'';
+        display:block;
+        padding-top:36%;
+    }
+}
+.b-advantages__img{
+    @extend .g-img-centered;
+}
+.b-advantages__title{
+    @extend .b-action__title;
+}
+.b-advantages__content{
+    @extend .b-action__content;
+}

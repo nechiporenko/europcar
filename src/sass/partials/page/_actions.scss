@@ -35,7 +35,6 @@
     display:block;
     position:absolute;
     top:0; right:0; bottom:0; left:0;
-    background:#333;
 
     &:hover,
     &:active{
@@ -53,7 +52,7 @@
 
 .b-action__title{
     display:block;
-    margin:0 0 13px;
+    margin:0 0 17px;
     color:$title-color;
     @include font-size(18px);
     font-weight:400;

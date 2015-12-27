@@ -2,12 +2,13 @@
 
 
 @import "page/_banner.scss"; //Баннер з формою заявки
-@import "page/_actions.scss";//блок акційних пропозицій
+@import "page/_actions.scss";//блок Акційних пропозицій
+@import "page/_advantages.scss";//блок Переваги
 @import "page/_scroll-up.scss";
 
 /*Page Section*/
 .b-section{
-    padding:23px 0;
+    padding:23px 0 12px;
     background:#fff;
     font-weight:300;
 }

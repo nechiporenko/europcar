@@ -44,7 +44,6 @@ jQuery.extend(verge);
 
 // Мобильное меню
 // Маска для телефонного номера
-// Сообщения об отправке формы
 // Кнопка скролла страницы
 // Модальное окно
 // Если браузер не знает о svg-картинках
@@ -168,20 +167,6 @@ jQuery(document).ready(function ($) {
     // Маска для телефонного номера
     //---------------------------------------------------------------------------------------
     $('.js-phone-input').mask('+99 (999) 999-99-99');
-
-    //
-    // Сообщения об отправке формы
-    //---------------------------------------------------------------------------------------
-    // после аякс-отправки формы ($form), если все ок - $form.find('.g-notice--ok').fadeIn();
-    // если вернуло ошибку - $form.find('.g-notice--bad').fadeIn();
-    var showFormNotice = (function () {
-        var $notice = $('.js-notice');
-        $notice.append('<a class="g-notice__close"><i class="icon-cancel"></i></a>'); //иконка закрытия
-        $notice.on('click', '.g-notice__close', function (e) {//закроем блок по клику на иконку
-            e.preventDefault();
-            $(this).parent('div').fadeOut();
-        });
-    }());
 
     //
     // Кнопка скролла страницы
@@ -308,7 +293,9 @@ jQuery(document).ready(function ($) {
     // IE8
     //---------------------------------------------------------------------------------------
     if ($html.hasClass('lt-ie9')) {
-        $('.b-action__item:nth-child(2n+1)').css('margon-right', 0);
+        $('.b-action__item:nth-child(4n-1)').css('margin-right', 0);
+        $('.b-advantages__item:nth-child(4n-1)').css('margin-right', 0);
+        $('.b-advantages__item:nth-child(5n-1)').css('margin-left', 17 + '%');
     }
     
 });

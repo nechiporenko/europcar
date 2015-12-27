@@ -2,13 +2,16 @@
 /*Banner & Order Form*/
 .b-banner{
     @include padding(18px 0);
-    background-color:#808080;
-    background-image:url(../img/banner-sm.jpg);
+    background-color:#6290cb;
     background-position:center top;
     background-repeat:no-repeat;
     background-size:cover;
     box-sizing:border-box;
     overflow:hidden;
+
+    @include media($small){
+        background-image:url(../img/banner-sm.jpg);
+    }
 
     @include media($tablet){
         @include px2rem(height, 738px);
