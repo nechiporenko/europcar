@@ -3,7 +3,7 @@
 /*Site Logo*/
 .b-header__logo{
     float:left;
-    @include px2rem(width, 105px);
+    @include px2rem(width, 92px);
     @include px2rem(height, 36px);
     background-image:url(../img/logo.svg);
     background-repeat:no-repeat;
@@ -14,7 +14,7 @@
         float:none;
         display:block;
         margin:0 auto 22px;
-        @include px2rem(width, 221px);
+        @include px2rem(width, 194px);
         @include px2rem(height, 76px);
     }
 }
