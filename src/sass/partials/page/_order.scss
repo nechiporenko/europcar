@@ -109,3 +109,35 @@
         color:$primary;
     }
 }
+
+/*Banner slogan*/
+.b-order__slogan{
+    float:left;
+    width:380px;
+    padding:23px 18px;
+    box-sizing:border-box;
+    border:1px solid lighten(#333, 30%);
+    border-radius:20px;
+    background:#333333;
+    background:rgba(#333, .3);
+    display:none;
+
+    @include media($desktop){
+        display:block;
+    }
+}
+.b-order__subtitle{
+    display:block;
+    margin:0 0 20px;
+    color:#fff;
+    @include font-size(32px);
+    font-weight:300;
+    line-height:1.2;
+}
+.b-order__caption{
+    margin:0;
+    color:#fff;
+    font-weight:300;
+    line-height:1.1;
+    @include font-size(23px);
+}
